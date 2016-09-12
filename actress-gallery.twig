@@ -1,0 +1,71 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="page-content  page-content--voicereel">
+    <div class="container">
+
+        <div class="page-title-blocks">
+            <div class="row  row--gutters">
+                <div class="col  col--half">
+                    <div class="block  block--red">
+                        <div class="block-content">
+                            <h2>Actress</h2>
+                            {{widget('content', 'actress-gallery-text1', { content:'
+                                <p>Click here to view headshots and stills.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col  col--half">
+                    <div class="block  block--image">
+                        {{widget('image', 'actress-gallery-image1', {
+                          'src': asset('/images/gallery-thumbs.png')
+                        })|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="divider">
+           <img src="{{asset('images/divider.png')}}" alt=""/>
+        </div>
+
+
+        <!-- Actress Gallery -->
+        <div class="actress-slideshow">
+            {{widget('responsiveslideshow', 'slideshow', {
+                'transSpeed': '2000',
+                'transType': 'fade',
+                'showButtons': true,
+                'showBullets': true,
+                'allowPause': false,
+                'allowLoop': true,
+                'images':[
+                {
+                    'imageHeight':'auto',
+                    'imageWidth':'100%',
+                    'url':asset('images/gallery/gallery-image1.jpg'),
+                    'title':'Lorum Ipsum Elit Dui'
+                },
+                {
+                    'imageHeight':'auto',
+                    'imageWidth':'100%',
+                    'url':asset('images/gallery/gallery-image2.jpg'),
+                    'title':'Donec a Iaculis Felis'
+                },
+                {
+                    'imageHeight':'auto',
+                    'imageWidth':'100%',
+                    'url':asset('images/gallery/gallery-image3.jpg'),
+                    'title':'Donec a Iaculis Felis'
+                }
+            ]})|raw}}
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

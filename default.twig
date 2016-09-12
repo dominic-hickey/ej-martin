@@ -1,0 +1,41 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Page Content -->
+<div class="page-content  page-content--home">
+    <div class="site-container">
+
+        <div class="page-title-blocks">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="block  block--red">
+                        <h2>{{ page.title }}</h2>
+                        {{widget('content', 'default-text1', { content:'
+                            <p>Info here</p>
+                        '})|raw}}
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="block  block--image">
+                        {{widget('image', 'cv-image1', {
+                          'src': asset('/images/cv-img.png')
+                        })|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="site-content">
+                <div class="zone-content">
+                	{{zone('main')|raw}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

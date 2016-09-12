@@ -1,0 +1,87 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="page-content  page-content--voicereel">
+    <div class="container">
+
+        <div class="page-title-blocks">
+            <div class="row  row--gutters">
+                <div class="col  col--half">
+                    <div class="block  block--red">
+                        <div class="block-content">
+                            <h2>Voicereel</h2>
+                            {{widget('content', 'voicereel-text1', { content:'
+                                <p>Listen to a selection of my voice clips here.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col  col--half">
+                    <div class="block  block--image">
+                        {{widget('image', 'voicereel-image1', {
+                          'src': asset('/images/title-image--voicereel.jpg')
+                        })|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
+           <img src="{{asset('images/divider.png')}}" alt=""/>
+        </div>
+
+
+        <!-- Voicereels -->
+        <div class="voicereel-blocks">
+            <div class="row  row--gutters">
+
+                <div class="col  col--half">
+                    <div class="block  block--grey">
+                        <div class="voicereel-audio">
+                            <h3>Commercial Reel (Extended)</h3>
+                            <audio controls>
+                                <source src="audio/commercial-reel(extended).mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="block  block--grey">
+                        <div class="voicereel-audio">
+                            <h3>Documentary Reel</h3>
+                            <audio controls>
+                                <source src="audio/documentary-reel.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+                <div class="col  col--half">
+                    <div class="block  block--grey">
+                        <div class="voicereel-audio">
+                            <h3>Commercial Reel (Short)</h3>
+                            <audio controls>
+                                <source src="{{ asset('audio/commercial-reel-short.mp3')}}" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="block  block--grey">
+                        <div class="voicereel-audio">
+                            <h3>Corporate Reel</h3>
+                            <audio controls>
+                                <source src="audio/corporate-reel.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

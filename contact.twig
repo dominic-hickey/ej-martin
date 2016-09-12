@@ -1,0 +1,78 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="page-content  page-content--voicereel">
+    <div class="container">
+
+        <div class="page-title-blocks">
+            <div class="row  row--gutters">
+                <div class="col  col--third">
+                    <div class="block  block--red">
+                        <div class="block-content">
+                            <h2>Contact</h2>
+                            {{widget('content', 'contact-text1', { content:'
+                                <p>Get in contact using the details below.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col  col--two-thirds">
+                    <div class="block  block--image">
+                        {{widget('image', 'contact-image1', {
+                          'src': asset('/images/title-image--contact.jpg')
+                        })|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
+           <img src="{{asset('images/divider.png')}}" alt=""/>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <div class="row  row--gutters">
+                <div class="col  col--third">
+                    {{widget('content', 'contact-text2', { content:'
+                        <h3>DETAILS</h3>
+                    '})|raw}}
+                </div>
+                <div class="col  col--two-thirds">
+                    <div class="row  row--gutters">
+                        <div class="col  col--half">
+                            {{widget('content', 'contact-text3', { content:'
+                                <h4>Telephone</h4>
+                                <p>020-7323 0546</p>
+                            '})|raw}}
+                            {{widget('content', 'contact-text4', { content:'
+                                <h4>Agent</h4>
+                                <p>Marcus &amp; McCrimmon Management</p>
+                                <a href="http://www.marcusandmccrimmon.com">www.marcusandmccrimmon.com</a>
+                            '})|raw}}
+                            {{widget('content', 'contact-text5', { content:'
+                                <p>Winston House, 3 Bedford Square, London WC1B 3RA</p>
+                            '})|raw}}
+                        </div>
+                        <div class="col  col--half">
+                            {{widget('content', 'contact-text6', { content:'
+                                <h4>Email Address</h4>
+                                <p><a href="mailto:info@marcusandmccrimmon.com">info@marcusandmccrimmon.com</a></p>
+                            '})|raw}}
+                            {{widget('content', 'contact-text7', { content:'
+                                <h4>Spotlight Pin</h4>
+                                <p>6216-8973-8372</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+{% endblock %}

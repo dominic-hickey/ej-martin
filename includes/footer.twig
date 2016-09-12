@@ -1,0 +1,41 @@
+<footer class="footer">
+  <div class="container  row  row--sb  row--gutters">
+    <div class="col">
+        {{widget('content', 'footer-text1', { content:'
+            <h4>PAGE INDEX</h4>
+        '})|raw}}
+        {{widget('extendednavigation', 'footer-navigation', {"align":"right"})|raw}}
+    </div>
+    <div class="col">
+      {{widget('content', 'footer-text2', { content:'
+          <h4>GET IN TOUCH</h4>
+      '})|raw}}
+      {{widget('content', 'footer-text3', { content:'
+          <p>Any Questions?<a href="contact.html"><b> Contact </b></a> me today.</p>
+      '})|raw}}
+      <div class="buttons">
+         <a href="mailto:ej_martin@hotmail.co.uk?subject=Your Enquiry" class="email" title="Email"></a>
+         <a href="http://www.facebook.com/profile.php?id=516268924" class="facebook" title="Facebook"></a>
+         <a href="http://twitter.com/#!/@Emma_JaneMartin" class="twitter" title="Twitter"></a>
+         <a href="http://www.uk.castingcallpro.com/view.php?uid=330081" class="casting" title="Casting Call Pro"></a>
+      </div>
+      <a href="http://www.spotlight.com/6216-8973-8372" class="footer-spot"></a>
+    </div>
+
+    <div class="col">
+      {{widget('content', 'footer-text5', { content:'
+          <h4>CONTACT ME</h4>
+      '})|raw}}
+      <div id="contact-area">
+         <ul>
+            <li><p>Tel: 07876 731 450</p></li>
+            <li><p>Email: <a href="mailto:ej_martin@hotmail.co.uk">ej_martin@hotmail.co.uk</a></p></li>
+            <li><p>Spotlight: 6216-8973-8372</p></li>
+         </ul>
+      </div>
+      <div class="copyright">
+        <p>© EJ MARTIN | {{ "now"|date("Y") }}</p>
+      </div>
+    </div>
+  </div>
+</footer>

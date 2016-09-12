@@ -1,0 +1,64 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="page-content  page-content--voicereel">
+    <div class="container">
+
+        <div class="page-title-blocks">
+            <div class="row  row--gutters">
+                <div class="col  col--half">
+                    <div class="block  block--red">
+                        <div class="block-content">
+                            <h2>Gallery</h2>
+                            {{widget('content', 'gallery-text1', { content:'
+                                <p>Photographic portfolios of my acting and modelling work.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col  col--half">
+                    <div class="block  block--image">
+                        {{widget('image', 'gallery-image1', {
+                          'src': asset('/images/gallery-thumbs.png')
+                        })|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="divider">
+           <img src="{{asset('images/divider.png')}}" alt=""/>
+        </div>
+
+
+        <!-- Gallery Blocks -->
+        <div class="gallery-blocks">
+            <div class="row  row--gutters">
+
+                <div class="col  col--half">
+                    <div class="block  block--grey">
+                        <a href="/actress-gallery" class="gallery-link">
+                            <h2>Actress</h2>
+                            <p>Click here to view headshots and stills.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col  col--half">
+                    <div class="block  block--grey">
+                        <a href="/model-gallery" class="gallery-link">
+                            <h2>Model</h2>
+                            <p>Click here to view my modelling portfolio.</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

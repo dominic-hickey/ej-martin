@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="page-content  page-content--voicereel">
+    <div class="container">
+
+        <div class="page-title-blocks">
+            <div class="row  row--gutters">
+                <div class="col  col--half">
+                    <div class="block  block--red">
+                        <div class="block-content">
+                            <h2>Showreel</h2>
+                            {{widget('content', 'showreel-text1', { content:'
+                                <p>Watch examples of my screen work here.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col  col--half">
+                    <div class="block  block--image">
+                        {{widget('image', 'showreel-image1', {
+                          'src': asset('/images/film.jpg')
+                        })|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
+           <img src="{{asset('images/divider.png')}}" alt=""/>
+        </div>
+
+        <!-- Video !-->
+        <div class="showreel-video">
+            <iframe src="https://player.vimeo.com/video/126694520" width="100%" height="510" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {{widget('content', 'showreel-text2', { content:'
+                <h3>EJ Martin Showreel 2016</h3>
+            '})|raw}}
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

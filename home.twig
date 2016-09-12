@@ -1,0 +1,102 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="home-slideshow">
+    {{widget('responsiveslideshow', 'home-slideshow', {
+        'duration':'4',
+        'transSpeed': '2000',
+        'transType': 'fade',
+        'images':[
+        {
+            'url':asset('images/new-slide.jpg')
+        },
+        {
+            'url':asset('images/new-slide1.jpg')
+        },
+        {
+            'url':asset('images/new-slide2.jpg')
+        }
+        ]
+    })|raw}}
+</div>
+
+<div class="page-content  page-content--home">
+
+    <div class="container">
+
+        <div class="name-text">
+            {{widget('content', 'home-text1', { content:'
+                <h1>EJ Martin</h1>
+            '})|raw}}
+        </div>
+
+        <div class="intro-text">
+            {{widget('content', 'home-text2', { content:'
+                <p>EJ Martin is a London-based actress.</p>
+
+                <p>She is appearing as Kathleen Moore in the European premiere of F. Scott Fitzgerald&#39;s THE LAST TYCOON at The Arts Theatre (West End) from August - September 2016. Book tickets <a href="https://artstheatrewestend.co.uk/whats-on/the-last-tycoon-/" target="_blank">here</a>.</p>
+
+                <p>She recently appeared as guest lead Patsy Brown on an episode of CASUALTY for BBC One, and has just wrapped filming on ALLIED for Paramount Pictures, directed by Robert Zemeckis.</p>
+
+                <p>EJ also recently originated the role of Phoebe in the world premiere of PHOEBE by A.C. Smith, the Verity Bargate and Adrian Pagan award-nominated play that ran at The King&#39;s Head Theatre throughout July 2016. Read a selection of reviews for that role <a href="/reviews">here</a>.</p>
+            '})|raw}}
+        </div>
+
+        <div class="divider">
+           <img src="{{asset('images/divider.png')}}" alt=""/>
+        </div>
+
+        <!-- Intro Images !-->
+        <div class="intro-images">
+            <div class="row  row--sb">
+                <div class="col">
+                    <div class="intro-image">
+                        {{widget('image', 'intro-images-1', {
+                          'src': asset("/images/see-my-work.jpg")
+                        })|raw}}
+                        <div class="intro-image-text">
+                            {{widget('content', 'intro-image-text-1', { content: '
+                                <h3>See my work</h3>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="intro-image">
+                        {{widget('image', 'intro-images-2', {
+                          'src': asset("/images/see-me1.jpg")
+                        })|raw}}
+                        <div class="intro-image-text">
+                            {{widget('content', 'intro-image-text-2', { content: '
+                                <h3>See me</h3>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="intro-image">
+                        {{widget('image', 'intro-images-3', {
+                          'src': asset("/images/hear-me.jpg")
+                        })|raw}}
+                        <div class="intro-image-text">
+                            {{widget('content', 'intro-image-text-3', { content: '
+                                <h3>Hear me</h3>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="{{asset('js/button-jquery.js')}}"></script>
+
+{% endblock %}

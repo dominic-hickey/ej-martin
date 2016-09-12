@@ -1,0 +1,44 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="page-content  page-content--voicereel">
+    <div class="container">
+
+        <div class="page-title-blocks">
+            <div class="row  row--gutters">
+                <div class="col  col--third">
+                    <div class="block  block--red">
+                        <div class="block-content">
+                            <h2>News</h2>
+                            {{widget('content', 'news-text1', { content:'
+                                <p>Recent events and news.</p>
+                            '})|raw}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col  col--two-thirds">
+                    <div class="block  block--image">
+                        {{widget('image', 'news-image1', {
+                          'src': asset('/images/title-image--news.jpg')
+                        })|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
+           <img src="{{asset('images/divider.png')}}" alt=""/>
+        </div>
+
+        <!-- Zone -->
+        <div class="zone-content">
+            {{zone('main')|raw}}
+        </div>
+
+
+    </div>
+</div>
+
+
+{% endblock %}

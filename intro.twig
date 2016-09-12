@@ -1,0 +1,24 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Page Content -->
+<div class="page  page--intro">
+    <div class="site-container">
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="site-content">
+                <div class="zone-content">
+                    {{widget('content', 'intro-text', { content:'
+                        <h1>EJ Martin</h1>
+                        <h4>Actress</h4>
+                    '})|raw}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
