@@ -4,7 +4,32 @@
         {{widget('content', 'footer-text1', { content:'
             <h4>PAGE INDEX</h4>
         '})|raw}}
-        {{widget('extendednavigation', 'footer-navigation', {"align":"right"})|raw}}
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="/" class="item-name"></a>
+          </li>
+          <li class="navigation-item">
+            <a href="/cv" class="item-name">CV</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/showreel" class="item-name">Showreel</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/voicereel" class="item-name">Voicereel</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/gallery" class="item-name">Gallery</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/news" class="item-name">News</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/reviews" class="item-name">Reviews</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/contact" class="item-name">Contact</a>
+          </li>
+        </ul>
     </div>
     <div class="col">
       {{widget('content', 'footer-text2', { content:'
@@ -13,13 +38,17 @@
       {{widget('content', 'footer-text3', { content:'
           <p>Any Questions?<a href="contact.html"><b> Contact </b></a> me today.</p>
       '})|raw}}
-      <div class="buttons">
-         <a href="mailto:ej_martin@hotmail.co.uk?subject=Your Enquiry" class="email" title="Email"></a>
-         <a href="http://www.facebook.com/profile.php?id=516268924" class="facebook" title="Facebook"></a>
-         <a href="http://twitter.com/#!/@Emma_JaneMartin" class="twitter" title="Twitter"></a>
-         <a href="http://www.uk.castingcallpro.com/view.php?uid=330081" class="casting" title="Casting Call Pro"></a>
-      </div>
-      <a href="http://www.spotlight.com/6216-8973-8372" class="footer-spot"></a>
+       <ul class="social-list">
+        <li class="social-item">
+          <a href="mailto:ej_martin@hotmail.co.uk?subject=Your Enquiry" class="social-link"><i class="icon icon--email"></i></a>
+        </li>
+        <li class="social-item">
+          <a href="/" class="social-link"><i class="icon icon--facebook"></i></a>
+        </li>
+        <li class="social-item">
+          <a href="/" class="social-link"><i class="icon icon--twitter"></i></a>
+        </li>
+      </ul>
     </div>
 
     <div class="col">

@@ -4,7 +4,7 @@
 
 
 #tdk-toolbar {
-    // display: none!important;
+    display: none!important;
 }
 
 
@@ -123,9 +123,6 @@ body.edit .widget .content {
     background: @color__header--background;
     border-bottom: 3px solid @color__primary;
 
-    @media @tablet {
-    }
-
     .row {
         .align-items(center);
     }
@@ -147,6 +144,7 @@ body.edit .widget .content {
     }
     h4 {
         padding-bottom: 0;
+        color: #bbb4b4;
     }
 }
 .companyname {
@@ -240,6 +238,48 @@ body.edit .widget .content {
         }
     }
 }
+
+
+
+
+// Footer Social
+// -----------------------------
+
+
+.social-list {
+    margin-top: 20px;
+}
+
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?v=4.2.0');
+    src: url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+        url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+        url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+        url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Fontawesome
+.icon:before,
+.icon:after {
+    font-family: 'FontAwesome', sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-size: 22px;
+}
+
+
+// Widget Icons
+// ------------
+
+.icon--email:before { content: "\f0e0"; }
+.icon--twitter:before { content: "\f099"; }
+.icon--facebook:before { content: "\f09a"; }
 
 
 
@@ -579,6 +619,16 @@ i {
 // -----------------------------
 
 
+.page-content--reviews .zone-content .columns-two-right p + p {
+    margin-top: 10px;
+}
+
+
+// -----------------------------
+// #Contact Page Styles
+// -----------------------------
+
+
 .contact-details {
     .col--third {
         @media @tablet {
@@ -600,10 +650,9 @@ i {
     }
     p, a {
         padding-bottom: 0;
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 300;
-        line-height: 20px;
+        line-height: 24px;
         color: #312e2e;
     }
     a {
