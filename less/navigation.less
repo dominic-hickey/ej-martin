@@ -1,0 +1,203 @@
+// -------------------------------------
+// JadeKeys: LESS > navigationigation
+// -------------------------------------
+
+
+
+
+// Template navigationigation
+// ------------------------------
+
+
+.template-navigation {
+
+	@media @tablet {
+
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		.gradient(#494D6E, @color__navigationy);
+		opacity: 0;
+		.transition(.6s);
+		height: 0;
+		z-index: 9998;
+	}
+
+	// Open (Fullscreen)
+	&.open {
+
+		&:after {
+			height: auto;
+			max-width: @value__container--width;
+			margin: 0 auto;
+			background-color: @color__h1--text;
+			opacity: 1;
+		}
+
+		.navigation-list {
+			display: inline-block;
+			padding-top: 25%;
+			opacity: 1;
+			.transition(.8s);
+		}
+	}
+}
+
+
+
+
+// navigation List
+// ------------------------------
+
+
+.navigation-list {
+	.flex-display;
+	.justify-content(space-between);
+	margin: 0;
+	.transition(.6s);
+
+	@media @bp-1024 {
+
+    }
+	@media @tablet {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    z-index: 9999;
+		display: none;
+	    width: 80%;
+	    opacity: 0;
+	    margin: auto;
+	    border-top: 0;
+	    text-align: center;
+	}
+}
+
+
+
+// Navigation Item
+// ------------------------------
+
+
+.navigation-item {
+
+	@media @tablet {
+		display: block;
+		width: 100%;
+		margin-bottom: 46px;
+    }
+    @media @mobile {
+    	margin-bottom: 30px;
+    }
+}
+
+
+
+
+// Navigation Link
+// ------------------------------
+
+
+.navigation-link {
+	padding: 0 12px;
+	font-family: @font-swatch4-font-family;
+	font-size: 13px;
+	font-weight: 400;
+	color: @color-swatch7;
+
+	@media @tablet {
+		display: block;
+		width: 100%;
+    	font-size: 24px;
+    }
+    @media @mobile {
+    	font-size: 20px;
+    }
+}
+
+
+
+
+
+// navigation Icon
+// ------------------------------
+
+
+.navigation-toggle {
+	position: relative;
+	z-index: 10000;
+	width: 42px;
+	height: 47px;
+	margin-left: auto;
+	padding: 22px 10px;
+	display: none;
+	background-clip: content-box;
+	background-color: white;
+	overflow: hidden;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+
+	@media @tablet {
+		display: block;
+	}
+
+	&:active,
+	&:focus,
+	&:hover {
+		outline: none;
+		background-color: white;
+	}
+
+	// Top and bottom navigationigation item bar
+	&:after,
+	&:before {
+		content: "";
+		height: 3px;
+		width: 27px;
+		position: absolute;
+		left: 5px;
+		display: block;
+		background-color: white;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	// Top bar
+	&:before {
+		top: 13px;
+	}
+
+	// Bottom bar
+	&:after {
+		bottom: 13px;
+	}
+
+	// Open navigation Icon
+	.open & {
+		background-color: transparent;
+
+		&:before {
+			top: 21px;
+			-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg); -ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		&:after {
+			bottom: 23px;
+			-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg); -ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+	}
+}

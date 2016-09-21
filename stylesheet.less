@@ -30,6 +30,7 @@
 @import "@{templateLocal}/less/variables.less";
 @import "@{templateLocal}/less/mixins.less";
 @import "@{templateLocal}/less/layout.less";
+@import "@{templateLocal}/less/navigation.less";
 
 
 
@@ -39,7 +40,7 @@
 // -----------------------------
 
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
     margin: 0;
     padding: 0 0 10px 0;
     -webkit-font-smoothing: antialiased;
@@ -123,8 +124,18 @@ body.edit .widget .content {
     background: @color__header--background;
     border-bottom: 3px solid @color__primary;
 
+    @media @tablet {
+        padding: 4px 0;
+    }
+
     .row {
         .align-items(center);
+
+        &--sb {
+            @media @mobile {
+                .flex-direction(row);
+            }
+        }
     }
 }
 
@@ -155,27 +166,6 @@ body.edit .widget .content {
 
 
 // -----------------------------
-// #Navigation
-// -----------------------------
-
-
-.navigation-list {
-    margin: 0;
-}
-
-.navigation-toggle {
-    display: none;
-}
-
-.navigation-item .item-name {
-    padding: 0 12px;
-    // text-transform: uppercase;
-}
-
-
-
-
-// -----------------------------
 // #Footer
 // -----------------------------
 
@@ -199,22 +189,11 @@ body.edit .widget .content {
             padding: 0 10px 20px;
         }
     }
-    .navigation-list {
-        margin-top: 18px;
-    }
-    .navigation-item {
-        display: block;
-        text-align: left;
-
-        .item-name {
-            padding-left: 0;
-        }
-    }
 
     p {
         padding: 0;
         font-family: @font-swatch4-font-family;
-        font-size: 11px;
+        font-size: 13px;
         color: @color-swatch7;
     }
     a {
@@ -236,6 +215,34 @@ body.edit .widget .content {
         @media @mobile {
             margin-top: 20px;
         }
+    }
+}
+
+// Footer Menu
+a.footer-navigation-link {
+    font-family: @font-swatch4-font-family;
+    font-size: 13px;
+    font-weight: 400;
+    color: #bbb4b4;
+
+    &:hover {
+        color: white;
+    }
+}
+
+// Spotlight Image
+.spotlight-link {
+    display: inline-block;
+    margin-top: 30px;
+}
+.spotlight-image {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    .transition(.8s);
+
+    &:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
     }
 }
 
@@ -350,6 +357,9 @@ hr.rule {
 
     @media @tablet {
         height: 168px;
+    }
+    @media @mobile {
+        height: 140px;
     }
 
     h2 {

@@ -4,51 +4,53 @@
         {{widget('content', 'footer-text1', { content:'
             <h4>PAGE INDEX</h4>
         '})|raw}}
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="/" class="item-name"></a>
-          </li>
-          <li class="navigation-item">
-            <a href="/cv" class="item-name">CV</a>
-          </li>
-          <li class="navigation-item">
-            <a href="/showreel" class="item-name">Showreel</a>
-          </li>
-          <li class="navigation-item">
-            <a href="/voicereel" class="item-name">Voicereel</a>
-          </li>
-          <li class="navigation-item">
-            <a href="/gallery" class="item-name">Gallery</a>
-          </li>
-          <li class="navigation-item">
-            <a href="/news" class="item-name">News</a>
-          </li>
-          <li class="navigation-item">
-            <a href="/reviews" class="item-name">Reviews</a>
-          </li>
-          <li class="navigation-item">
-            <a href="/contact" class="item-name">Contact</a>
-          </li>
-        </ul>
+        <nav class="template-navigation">
+          <ul class="footer-navigation-list">
+            <li class="footer-navigation-item">
+              <a href="/cv" class="footer-navigation-link">CV</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="/showreel" class="footer-navigation-link">Showreel</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="/voicereel" class="footer-navigation-link">Voicereel</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="/gallery" class="footer-navigation-link">Gallery</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="/news" class="footer-navigation-link">News</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="/reviews" class="footer-navigation-link">Reviews</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="/contact" class="footer-navigation-link">Contact</a>
+            </li>
+          </ul>
+      </nav>
     </div>
     <div class="col">
       {{widget('content', 'footer-text2', { content:'
           <h4>GET IN TOUCH</h4>
       '})|raw}}
       {{widget('content', 'footer-text3', { content:'
-          <p>Any Questions?<a href="contact.html"><b> Contact </b></a> me today.</p>
+          <p>Any Questions?<a href="/contact"><b> Contact </b></a> me today.</p>
       '})|raw}}
        <ul class="social-list">
         <li class="social-item">
           <a href="mailto:ej_martin@hotmail.co.uk?subject=Your Enquiry" class="social-link"><i class="icon icon--email"></i></a>
         </li>
         <li class="social-item">
-          <a href="/" class="social-link"><i class="icon icon--facebook"></i></a>
+          <a href="https://www.facebook.com/ej.martin.184" target="_blank" class="social-link"><i class="icon icon--facebook"></i></a>
         </li>
         <li class="social-item">
-          <a href="/" class="social-link"><i class="icon icon--twitter"></i></a>
+          <a href="https://twitter.com/@Emma_JaneMartin" target="_blank" class="social-link"><i class="icon icon--twitter"></i></a>
         </li>
       </ul>
+      <a href="http://www.spotlight.com/6216-8973-8372" class="spotlight-link">
+        <img src="{{asset('images/footer-spotlight.png')}}" class="spotlight-image">
+      </a>
     </div>
 
     <div class="col">
