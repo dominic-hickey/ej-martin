@@ -560,64 +560,10 @@ i {
 
 
 .actress-slideshow {
-    .responsiveslideshow,
-    .responsiveslideshow .slides-list,
-    .responsiveslideshow .figure {
-        position: relative;
-        min-height: 450px;
-    }
-
-
-    // Slide Arrows
-    .slide-navigation {
-        position: absolute;
-
-        .button {
-            background-color: transparent;
+    .slide-item {
+        &.current {
+            display: list-item;
         }
-    }
-    .previous-button {
-        position: relative;
-        left: -30px;
-    }
-
-    // Pagination
-    .slide-pagination {
-        .button {
-            background-color: transparent;
-            text-indent: -9999px;
-        }
-    }
-    .control-text {
-        display: none;
-    }
-}
-
-
-
-// Element Resets
-.slides-list,
-.pagination-list,
-.responsiveslideshow .figure {
-    margin: 0;
-    list-style: none;
-    line-height: normal;
-}
-
-.slideshow-controls {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-
-// Slide Item
-// ----------
-
-.slide-item {
-    display: none;
-    &.current {
-        display: list-item; // Current Item
     }
 }
 
