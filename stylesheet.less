@@ -535,7 +535,7 @@ i {
 
 
 // -----------------------------
-// #Gallery Page
+// #Gallery Pages
 // -----------------------------
 
 
@@ -555,15 +555,84 @@ i {
 
 
 
-// Gallery Slideshow
+// Image Gallery
 // -----------------------------
 
 
-.actress-slideshow {
-    .slide-item {
-        &.current {
-            display: list-item;
+.gallery {
+
+    // Gallery List
+    .gallery-list {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    // Gallery Item
+    .gallery-item {
+        position: relative;
+        width: 32%;
+        margin-bottom: 20px;
+        // Display 100% at mobile
+        @media @mobile {
+            width: 100%;
         }
+    }
+
+    // Image Link
+    .image-link {
+        position: relative;
+        display: block;
+        height: 280px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media @tablet {
+            height: 210px;
+        }
+
+        .image {
+            display: none;
+        }
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        margin: 0;
+        padding: 8px 10px;
+    }
+
+    .image-title,
+    .image-description {
+        font-family: @font-swatch3-font-family;
+    }
+    .image-title {
+        font-size: 11px;
+        line-height: 20px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+    .image-description {
+        font-size: 13px;
+        line-height: 18px;
+        color: #c5c5c5;
     }
 }
 
