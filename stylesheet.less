@@ -45,6 +45,13 @@ h1, h2, h3, h4, p {
     padding: 0 0 10px 0;
     -webkit-font-smoothing: antialiased;
 }
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+p {
+    font-family: "georgia";
+}
+
 ul, li {
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -413,10 +420,13 @@ hr.rule {
     .responsiveslideshow .slides-list,
     .responsiveslideshow .figure {
         position: relative;
-        min-height: 290px;
+        min-height: 450px;
     }
     .responsiveslideshow {
         border-bottom: 2px solid @color__primary;
+    }
+    .responsiveslideshow .figure {
+        background-size: cover;
     }
 
     .slide-pagination {
