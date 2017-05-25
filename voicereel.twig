@@ -36,45 +36,9 @@
         <div class="voicereel-blocks">
             <div class="row  row--gutters">
 
-                <div class="col  col--half">
-                    <div class="block  block--grey">
-                        <div class="voicereel-audio">
-                            <h3>Commercial Reel (Extended)</h3>
-                            <audio controls>
-                                <source src="audio/commercial-reel(extended).mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="block  block--grey">
-                        <div class="voicereel-audio">
-                            <h3>Documentary Reel</h3>
-                            <audio controls>
-                                <source src="audio/documentary-reel.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                    </div>
-                </div>
-                <div class="col  col--half">
-                    <div class="block  block--grey">
-                        <div class="voicereel-audio">
-                            <h3>Commercial Reel (Short)</h3>
-                            <audio controls>
-                                <source src="{{ asset('audio/commercial-reel-short.mp3')}}" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="block  block--grey">
-                        <div class="voicereel-audio">
-                            <h3>Corporate Reel</h3>
-                            <audio controls>
-                                <source src="audio/corporate-reel.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                    </div>
+                <!-- Zone -->
+                <div class="zone-content">
+                    {{zone('main')|raw}}
                 </div>
 
             </div>
